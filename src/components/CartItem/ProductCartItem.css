@@ -37,3 +37,8 @@
 .cart-btn button:hover {
     background-color: #1d4ed8;
 }
+
+.cart-btn {
+    display: flex;
+    justify-content: space-between;
+}

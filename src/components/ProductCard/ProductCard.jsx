@@ -1,11 +1,11 @@
 import "./ProductCard.css";
 import products from "../../data/product";
-import CartItem from "../CartItem/CartItem";
+import ProductCartItem from '../CartItem/ProductCartItem'
 
 const ProductCard = () => {
   return (
     <div className="productCard">
-      {products.map(item => <CartItem key={item.id} item={item}></CartItem>)}
+      {products.map(item => <ProductCartItem key={item.id} item={item}></ProductCartItem>)}
     </div>
   );
 };
