@@ -35,7 +35,19 @@ const CartProvider = ({ children }) => {
       })
     }
 
-    
+    const decreaseQuantity = (id) => {
+      setCartItems(prev => {
+        return prev.map(item => {
+          if (item.id === id) {
+            return {
+              ...item,
+              quantity: item.quantity - 1,
+            }
+          }
+          return item;
+        })
+      })
+    }
 
     const removeFromCart = (id) => {
       setCartItems(prev => prev.filter(item => item.id !== id))
