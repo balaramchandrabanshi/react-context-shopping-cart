@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CartContext from "../../context/CartContext";
-import ProductCartItem from "../../components/CartItem/ProductCartItem";
+import CartItem from "../../components/CartItem/CartItem";
 import { useNavigate } from "react-router-dom";
 import "./Cart.css";
 
@@ -27,7 +27,7 @@ const Cart = () => {
         <h1>Your Cart Added Products</h1>
         <div className="items">
           {cartItems.map((item) => (
-            <ProductCartItem key={item.id} item={item}></ProductCartItem>
+            <CartItem key={item.id} item={item}></CartItem>
           ))}
         </div>
       </div>
